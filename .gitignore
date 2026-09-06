@@ -4,3 +4,8 @@ __pycache__/
 streamlit.log
 streamlit.pid
 .streamlit/
+
+# Personal / non-repo files
+CONTEXT.md
+LINKEDIN_PROJECT.md
+LINKEDIN_POST.md
