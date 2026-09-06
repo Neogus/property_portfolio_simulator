@@ -2,7 +2,7 @@
 
 A comprehensive financial simulator that compares housing strategies — **buying a home**, **renting & investing**, or **becoming a landlord** — helping you make data-driven decisions about the biggest financial choice of your life.
 
-> 🌐 **[Try it live →](YOUR_STREAMLIT_URL_HERE)**
+> 🌐 **[Try it live →] https://property-vs-portfolio.streamlit.app/**
 >
 > _Replace the URL above with your Streamlit Cloud link after deployment._
 
@@ -79,12 +79,6 @@ streamlit run app.py
 ```
 
 Opens at **http://localhost:8501**.
-
-### Deploy Free on Streamlit Community Cloud
-
-1. Push this repo to your GitHub account
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-3. Click **New app** → select this repo → branch `main` → file `app.py` → **Deploy**
 
 ---
 
