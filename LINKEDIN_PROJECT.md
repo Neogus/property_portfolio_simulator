@@ -29,3 +29,5 @@ Tech Stack: Python 3.12 (stdlib only) | Streamlit | Pandas | Plotly | Streamlit 
 
 Live app: https://propertyvsportfolio.streamlit.app
 Source: https://github.com/Neogus/property_portfolio_simulator
+
+Support: https://buymeacoffee.com/Neogus

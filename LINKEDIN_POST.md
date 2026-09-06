@@ -19,8 +19,8 @@ The result? A clear, data-driven answer showing your **net worth after taxes** f
 
 Spoiler: The answer depends heavily on your specific numbers. That's exactly why this tool exists.
 
-🔗 Try it free: https://property-vs-portfolio.streamlit.app
-💻 Open source: https://github.com/YOUR_USERNAME/property-vs-portfolio
+🔗 Try it free: https://propertyvsportfolio.streamlit.app
+💻 Open source: https://github.com/Neogus/property_portfolio_simulator
 
 Built with Python, Streamlit & Plotly. Feedback welcome!
 
