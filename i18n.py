@@ -10,6 +10,7 @@ TRANSLATIONS = {
         'app_title': '🏠 Property vs Portfolio Simulator',
         'app_desc': 'Simulate and compare housing strategies — buying, renting & investing, or becoming a landlord. See where your money grows more over time with detailed financial projections.',
         'lang_label': 'Language',
+        'disclaimer': '⚠️ Disclaimer: This tool is for educational and informational purposes only. It does not constitute financial, tax, or investment advice. Results are based on simplified models and assumptions that may not reflect actual market conditions, tax regulations, or individual circumstances. Always consult a qualified financial advisor, tax professional, or mortgage broker before making real estate or investment decisions. The authors assume no liability for financial decisions made based on this tool\'s output.',
 
         # ============================================================
         # SIDEBAR - GLOBAL PARAMETERS
@@ -289,6 +290,7 @@ TRANSLATIONS = {
         'app_title': '🏠 Simulador Propiedad vs Cartera',
         'app_desc': 'Simula y compara estrategias de vivienda — comprar, alquilar e invertir, o ser casero. Descubre dónde crece más tu dinero con proyecciones financieras detalladas.',
         'lang_label': 'Idioma',
+        'disclaimer': '⚠️ Aviso legal: Esta herramienta es solo para fines educativos e informativos. No constituye asesoramiento financiero, fiscal ni de inversión. Los resultados se basan en modelos y supuestos simplificados que pueden no reflejar las condiciones reales del mercado, la normativa fiscal o las circunstancias individuales. Consulte siempre a un asesor financiero cualificado, un profesional fiscal o un intermediario hipotecario antes de tomar decisiones inmobiliarias o de inversión. Los autores no asumen responsabilidad por decisiones financieras basadas en los resultados de esta herramienta.',
 
         # ============================================================
         # SIDEBAR - GLOBAL PARAMETERS

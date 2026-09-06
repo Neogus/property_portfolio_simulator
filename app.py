@@ -266,6 +266,7 @@ set_lang(st.session_state.app_lang)
 
 st.title(t('app_title'))
 st.markdown(t('app_desc'))
+st.caption(t('disclaimer'))
 st.divider()
 
 # ============================================================================
