@@ -167,4 +167,4 @@ Suggestions, bug reports, and feature requests welcome! Open an issue or submit 
 
 ## License
 
-MIT — free to use, modify, and distribute.
+**All Rights Reserved.** This repository is a portfolio showcase. The code is available for viewing only — it may not be copied, modified, or redistributed. See [LICENSE](LICENSE) for details.
