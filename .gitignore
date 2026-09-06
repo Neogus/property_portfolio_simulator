@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.views
+streamlit.log
+streamlit.pid
+.streamlit/
