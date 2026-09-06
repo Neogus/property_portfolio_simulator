@@ -159,6 +159,12 @@ Suggestions, bug reports, and feature requests welcome! Open an issue or submit 
 
 ---
 
+## Disclaimer
+
+> ⚠️ This tool is for **educational and informational purposes only**. It does not constitute financial, tax, or investment advice. Results are based on simplified models and assumptions that may not reflect actual market conditions, tax regulations, or individual circumstances. Always consult a qualified financial advisor, tax professional, or mortgage broker before making real estate or investment decisions. The authors assume no liability for financial decisions made based on this tool's output.
+
+---
+
 ## License
 
 **All Rights Reserved.** This repository is a portfolio showcase. The code is available for viewing only — it may not be copied, modified, or redistributed. See [LICENSE](LICENSE) for details.
