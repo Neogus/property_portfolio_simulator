@@ -421,6 +421,7 @@ with st.sidebar:
 
     # View counter at bottom of sidebar
     st.sidebar.caption(f'👁️ {views} views')
+    st.sidebar.caption('☕ [Support this project](https://github.com/sponsors/Neogus) · [Ko-fi](https://ko-fi.com/neogus43222)')
 
 # ============================================================================
 # SCENARIO RENDER FUNCTIONS

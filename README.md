@@ -1,10 +1,9 @@
 # 🏠 Property vs Portfolio Simulator
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://propertyvsportfolio.streamlit.app)
 
 A comprehensive financial simulator that compares housing strategies — **buying a home**, **renting & investing**, or **becoming a landlord** — helping you make data-driven decisions about the biggest financial choice of your life.
 
-> 🌐 **[Try it live →] https://property-vs-portfolio.streamlit.app/**
->
-> _Replace the URL above with your Streamlit Cloud link after deployment._
+> 🌐 **[Try it live →](https://propertyvsportfolio.streamlit.app)**
 
 ---
 
@@ -72,8 +71,8 @@ Add **unlimited scenarios** side by side — compare a fixed-rate 20-year mortga
 ### Run Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/property-vs-portfolio.git
-cd property-vs-portfolio
+git clone https://github.com/Neogus/property_portfolio_simulator.git
+cd property_portfolio_simulator
 pip install -r requirements.txt
 streamlit run app.py
 ```
@@ -162,6 +161,13 @@ Suggestions, bug reports, and feature requests welcome! Open an issue or submit 
 ## Disclaimer
 
 > ⚠️ This tool is for **educational and informational purposes only**. It does not constitute financial, tax, or investment advice. Results are based on simplified models and assumptions that may not reflect actual market conditions, tax regulations, or individual circumstances. Always consult a qualified financial advisor, tax professional, or mortgage broker before making real estate or investment decisions. The authors assume no liability for financial decisions made based on this tool's output.
+
+## 💖 Support This Project
+
+If you find this tool useful, consider supporting its development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-GitHub-EA4AAA?style=for-the-badge&logo=github-sponsors)](https://github.com/sponsors/Neogus)
+[![Ko-fi](https://img.shields.io/badge/Buy_Me_a_Coffee-Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/Neogus)
 
 ---
 
