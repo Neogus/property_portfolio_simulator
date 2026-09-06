@@ -13,11 +13,16 @@ streamlit run app.py
 ## Files
 | File | Lines | Purpose |
 |------|-------|---------|
-| `engine.py` | ~720 | Pure Python simulation engine (zero deps). Handles: French/Linear amortization, fixed/variable/mixed rates with base rate predictions, secondary loans (family/private/gov), max-affordable property solver, surplus equalization, landlord IRPF deductions (interest-only, depreciation, financing+repair cap with 4yr carry-forward, bad debt, legal costs), bank product bonificaciones, rent deposit lifecycle, opportunity cost modeling |
-| `app.py` | ~1030 | Streamlit GUI. Session state with flat scenario dicts → `_to_engine_scenario()` translates to nested engine format. Multi-tab scenarios, data editors for IRPF brackets / base rate predictions / bank products, Plotly charts, CSV export |
+| `engine.py` | ~720 | Pure Python simulation engine (zero deps). French/Linear amortization, fixed/variable/mixed rates with base rate predictions, secondary loans (family/private/gov), max-affordable property solver, surplus equalization, landlord IRPF deductions (interest-only, depreciation, financing+repair cap with 4yr carry-forward, bad debt, legal costs), bank product bonificaciones, rent deposit lifecycle, opportunity cost modeling |
+| `app.py` | ~1030 | Streamlit GUI. Session state with flat scenario dicts → `_to_engine_scenario()` translates to nested engine format. Multi-tab scenarios, data editors for IRPF brackets / base rate predictions / bank products, Plotly charts, CSV export. Legal disclaimer in EN/ES |
 | `i18n.py` | ~620 | 150+ keys in EN/ES. `t(key)` with fallback chain: current lang → 'en' → raw key. `set_lang()`/`get_lang()` with session state persistence |
 | `launch.py` | ~25 | Double-fork daemon for persistent local hosting |
-
+| `requirements.txt` | 3 | streamlit, pandas, plotly |
+| `README.md` | — | GitHub repo description with usage guide, tech stack, disclaimer |
+| `LINKEDIN_PROJECT.md` | — | Technical project description for LinkedIn |
+| `LINKEDIN_POST.md` | — | Ready-to-paste LinkedIn post |
+| `LICENSE` | — | All Rights Reserved — viewing only, no reuse |
+| `CONTEXT.md` | — | This file — project context for AI assistants |
 ## Engine API
 ```python
 from engine import run_simulation
@@ -63,6 +68,20 @@ All percentages in input dicts are in % form (e.g., 3.0 = 3%). Engine divides by
 6. **Language**: `set_lang()` called from session state BEFORE any rendering. Selectbox/radio store English values internally, display translated labels.
 
 ## Deployment
-- **Git**: initialized, 2 commits on `main`. Push to GitHub → deploy on Streamlit Community Cloud
-- **Analytics**: `GA_MEASUREMENT_ID` env var for GA4 + local `.views` file counter
-- **Dependencies**: streamlit, pandas, plotly (+ jinja2 for pandas styling)
+- **GitHub repo**: `Neogus/property_portfolio_simulator` on `main` branch
+- **Hosting**: Streamlit Community Cloud (free) — auto-deploys on every `git push` to `main`
+- **License**: All Rights Reserved — portfolio showcase, code is view-only
+- **Disclaimer**: Legal disclaimer displayed in-app (EN/ES) + in README
+- **Analytics**: Google Analytics 4 via `GA_MEASUREMENT_ID` env var + local `.views` file counter
+- **Bilingual**: Full EN/ES, switchable from sidebar
+- **Dependencies**: streamlit, pandas, plotly
+
+## Git Workflow
+```bash
+# Make changes, then:
+cd /mnt/c/Users/grabino/PycharmProjects/pythonProject/Mortgage/calculator
+git add <files>
+git commit -m "type: description"
+git push
+# Streamlit auto-redeploys in ~1-2 minutes
+```
