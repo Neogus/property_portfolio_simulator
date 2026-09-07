@@ -1,9 +1,9 @@
 # 🏠 Property vs Portfolio Simulator
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://propertyvsportfolio.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://property-vs-portfolio.streamlit.app/)
 
 A comprehensive financial simulator that compares housing strategies — **buying a home**, **renting & investing**, or **becoming a landlord** — helping you make data-driven decisions about the biggest financial choice of your life.
 
-> 🌐 **[Try it live →](https://propertyvsportfolio.streamlit.app)**
+> 🌐 **[Try it live →](https://property-vs-portfolio.streamlit.app/)**
 
 ---
 
