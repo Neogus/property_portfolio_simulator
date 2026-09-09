@@ -1,9 +1,9 @@
 # 🏠 Property vs Portfolio Simulator
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://property-vs-portfolio.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-AWS_EC2-FF9900?style=for-the-badge&logo=amazonec2)](https://d1rarx529p1tpn.cloudfront.net/mortgage/)
 
 A comprehensive financial simulator that compares housing strategies — **buying a home**, **renting & investing**, or **becoming a landlord** — helping you make data-driven decisions about the biggest financial choice of your life.
 
-> 🌐 **[Try it live →](https://property-vs-portfolio.streamlit.app/)**
+> 🌐 **[Try it live →](https://d1rarx529p1tpn.cloudfront.net/mortgage/)**
 
 ---
 
@@ -139,6 +139,7 @@ The **winner** is the scenario with the highest net worth after all taxes at the
 | Web Framework | Streamlit |
 | Data Processing | Pandas |
 | Visualization | Plotly |
+| Hosting | AWS EC2 + Nginx |
 | Internationalization | Custom i18n module (EN/ES) |
 
 **Architecture:** The simulation engine (`engine.py`) is a standalone Pure Python module with no web dependencies — it can be imported independently into a FastAPI backend, CLI tool, or Jupyter notebook.
