@@ -1,0 +1,20 @@
+[Unit]
+Description=Property vs Portfolio Simulator (Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/apps/property_portfolio_simulator
+ExecStart=/opt/apps/property_portfolio_simulator/venv/bin/streamlit run app.py \
+    --server.port 8501 \
+    --server.headless true \
+    --server.baseUrlPath mortgage \
+    --server.address 127.0.0.1
+Restart=always
+RestartSec=5
+Environment=STREAMLIT_SERVER_ENABLE_CORS=false
+Environment=STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION=false
+
+[Install]
+WantedBy=multi-user.target
