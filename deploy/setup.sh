@@ -2,9 +2,9 @@
 set -euo pipefail
 
 # =============================================================================
-# EC2 Setup Script — Deploys both Streamlit apps on a single t2.micro
+# EC2 Setup Script — Deploys both Streamlit apps on a single t3.micro
 # Usage: sudo bash setup.sh
-# Target: Ubuntu 24.04 LTS on EC2 Free Tier (t2.micro, 1 GB RAM)
+# Target: Amazon Linux 2023 on EC2 Free Tier (t3.micro, 1 GB RAM)
 # =============================================================================
 
 APP_DIR="/opt/apps"
@@ -12,14 +12,15 @@ MORTGAGE_REPO="https://github.com/Neogus/property_portfolio_simulator.git"
 TRADE_REPO="https://github.com/Neogus/vectorized-trade-simulator.git"
 
 echo "=== [1/7] Updating system ==="
-apt-get update && apt-get upgrade -y
+dnf update -y
 
 echo "=== [2/7] Installing dependencies ==="
-apt-get install -y python3 python3-venv python3-pip nginx git
+dnf install -y python3 python3-pip nginx git
+# python3-venv not needed on Amazon Linux — venv is built in
 
 echo "=== [3/7] Creating 1 GB swap file ==="
 if [ ! -f /swapfile ]; then
-    fallocate -l 1G /swapfile
+    dd if=/dev/zero of=/swapfile bs=1M count=1024
     chmod 600 /swapfile
     mkswap /swapfile
     swapon /swapfile
@@ -70,16 +71,16 @@ systemctl enable mortgage-app trade-sim
 systemctl start mortgage-app trade-sim
 
 echo "=== [7/7] Configuring Nginx ==="
-cp "$APP_DIR/property_portfolio_simulator/deploy/nginx.conf" /etc/nginx/sites-available/streamlit-apps
-ln -sf /etc/nginx/sites-available/streamlit-apps /etc/nginx/sites-enabled/
-rm -f /etc/nginx/sites-enabled/default
-nginx -t && systemctl restart nginx
+cp "$APP_DIR/property_portfolio_simulator/deploy/nginx.conf" /etc/nginx/conf.d/streamlit-apps.conf
+# Amazon Linux uses conf.d/ instead of sites-available/sites-enabled/
+nginx -t && systemctl enable nginx && systemctl restart nginx
 
 echo ""
 echo "============================================"
 echo "  SETUP COMPLETE"
 echo "============================================"
-PUBLIC_IP=$(curl -s --max-time 5 http://169.254.169.254/latest/meta-data/public-ipv4 2>/dev/null || hostname -I | awk '{print $1}')
+TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+PUBLIC_IP=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/public-ipv4)
 echo "  Mortgage Calculator: http://${PUBLIC_IP}/mortgage/"
 echo "  Trade Simulator:     http://${PUBLIC_IP}/trade/"
 echo "============================================"

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
+User=ec2-user
 WorkingDirectory=/opt/apps/property_portfolio_simulator
 ExecStart=/opt/apps/property_portfolio_simulator/venv/bin/streamlit run app.py \
     --server.port 8501 \

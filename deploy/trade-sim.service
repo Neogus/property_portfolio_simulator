@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
+User=ec2-user
 WorkingDirectory=/opt/apps/vectorized-trade-simulator
 ExecStart=/opt/apps/vectorized-trade-simulator/venv/bin/streamlit run app.py \
     --server.port 8502 \
