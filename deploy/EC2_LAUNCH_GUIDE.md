@@ -92,12 +92,12 @@ cd C:\Users\grabino\PycharmProjects\pythonProject
 
 # Mortgage repo
 (Get-ChildItem -Path "Mortgage\calculator" -Recurse -Include *.md,*.yml) | ForEach-Object {
-    (Get-Content $_.FullName) -replace 'YOUR-EC2-URL', 'YOUR-ACTUAL-IP' | Set-Content $_.FullName
+    (Get-Content $_.FullName) -replace '18.195.171.220', 'YOUR-ACTUAL-IP' | Set-Content $_.FullName
 }
 
 # Trade Sim repo
 (Get-ChildItem -Path "vectorized-trade-simulator" -Recurse -Include *.md,*.yml) | ForEach-Object {
-    (Get-Content $_.FullName) -replace 'YOUR-EC2-URL', 'YOUR-ACTUAL-IP' | Set-Content $_.FullName
+    (Get-Content $_.FullName) -replace '18.195.171.220', 'YOUR-ACTUAL-IP' | Set-Content $_.FullName
 }
 ```
 

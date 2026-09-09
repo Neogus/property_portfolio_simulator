@@ -64,7 +64,7 @@ pip install -r Requirements.txt
 deactivate
 
 echo "=== [6/7] Installing systemd services ==="
-cp "$APP_DIR/property_portfolio_simulator/deploy/mortgage.service" /etc/systemd/system/
+cp "$APP_DIR/property_portfolio_simulator/deploy/mortgage-app.service" /etc/systemd/system/
 cp "$APP_DIR/property_portfolio_simulator/deploy/trade-sim.service" /etc/systemd/system/
 systemctl daemon-reload
 systemctl enable mortgage-app trade-sim
